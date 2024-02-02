@@ -1,0 +1,101 @@
+body{
+    background-color: rgb(43, 43, 43);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 97vh;
+}
+
+#calculator{
+    background-color: black;
+    border-radius: 15px;
+    height: 640px;
+    width: 360px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    box-shadow: -4px 2px 15px black;
+}
+
+#content{
+    grid-row: span 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    color: white;
+    font-family: monospace;
+    font-weight: bold;
+    text-align: right;
+    font-size: 3rem;
+}
+
+#upper{
+    padding-top: 10%;
+    padding-right: 15px;
+}
+.animate{
+    animation: autoTransition 0.3s ease-in 0s forwards; 
+}
+@keyframes autoTransition {
+    to {
+        color: rgb(194, 194, 194);
+        font-size: 1.6rem;
+        font-weight: normal;
+        padding-top: 20%; 
+    }
+}
+
+#lower{
+    padding-top: 0%;
+    padding-right: 15px;
+}
+
+#keys{
+    grid-row: span 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    color: white;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 1.7rem;
+}
+
+.key{
+    border-radius: 50%;
+    margin: 7px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.equal{
+    background-color: rgb(255, 119, 0);
+    cursor: pointer;
+    transition: background-color 0.25s;
+}
+.equal:hover{
+    background-color: rgb(255, 98, 0);
+}
+.equal:active{
+    background-color: rgb(255, 142, 43);;
+}
+
+.inner{
+    background-color: rgb(75, 75, 75);
+    cursor: pointer;
+    transition: background-color 0.25s;
+}
+.inner:hover{
+    background-color: rgb(93, 93, 93);
+}
+
+.outer{
+    background-color: rgb(42, 42, 42);
+    cursor: pointer;
+    transition: background-color 0.25s;
+}
+.outer:hover{
+    background-color: rgb(59, 59, 59);
+}
+
